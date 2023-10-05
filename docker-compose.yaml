@@ -1,10 +1,10 @@
 services:
   website:
-    image: angular-project
+    image: zd48/ita-soccer-league:angular
     ports:
       - "3000:80"
 
   api:
-    image: mockoon-image
+    image: zd48/ita-soccer-league:mockoon
     ports:
       - "8080:8080"
