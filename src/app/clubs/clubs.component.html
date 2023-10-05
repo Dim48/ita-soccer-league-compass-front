@@ -1,0 +1,13 @@
+<h1>Clubs</h1>
+
+<div class="parent">
+    <a *ngFor='let club of clubs' routerLink="/clubs/{{club['name']}}">
+        <div id="id" class=" mx-2 mt-3 p-2 text-center">
+            <img src="assets/clubImages/{{club['imageUrl']}}" width="120px" height="110px" />
+            <p *ngIf="club['short']; else noShort" class="mt-1 mb-0">{{club['short']}}</p>
+            <ng-template #noShort>
+                <div class="mt-1 mb-0">&nbsp;</div>
+            </ng-template>
+        </div>
+    </a>
+</div>

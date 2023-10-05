@@ -1,0 +1,21 @@
+<div class="mt-4">
+    <h3>Leave a reply</h3>
+
+    <form id="myForm" class="needs-validation" action="/" method="post" novalidate>
+        <div class="form-group mb-0">
+            <textarea  style="position: relative; " (click)="formVisible = true" class="form-control" rows="3" placeholder="Enter your comment here..." required></textarea>
+        </div>
+
+        <div *ngIf="formVisible" class="bg-light p-3">
+            <div class="form-group">
+                <label for="inputName">Name *</label>
+                <input type="text" class="form-control" id="inputName" required>
+            </div>
+            <div class="form-group">
+                <label for="inputMail">Email *</label>
+                <input type="email" class="form-control" id="inputMail" placeholder="name@example.com" required>
+            </div>
+            <button class="d-block ml-auto btn bg-custom gradientTransition" type="submit">Submit</button>
+        </div>
+    </form>
+</div>

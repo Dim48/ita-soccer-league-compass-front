@@ -1,0 +1,21 @@
+.left {
+    width: 90px;
+}
+
+@media only screen and (max-width: 379px) {
+    .marginTop {
+        margin-top: 0.5rem;
+    }
+}
+
+@media only screen and (min-width: 380px) {
+    .mr-custom {
+        margin-right: 1.5rem !important;
+    }
+
+    .col-custom {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+}

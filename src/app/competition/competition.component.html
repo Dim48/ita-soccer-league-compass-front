@@ -1,0 +1,11 @@
+<div class="d-flex flex-column flex-md-row align-items-center bg-light mt-3 mb-4 p-2">
+    <img src="assets/logo.png" width="140" height="140" alt="Club logo" />
+    <div class="d-flex flex-column ml-md-3">
+        <h1 class="text-center text-md-left mb-0">Ita Soccer League</h1>
+        <p class="text-center text-md-left" style="color: #4c4c4d; font-size: 20px;">{{currentYear}} - {{currentYear + 1}}</p>
+    </div>
+</div>
+<div style="height: 10px;"></div>
+<app-standings [showHeader] = false></app-standings>
+<div style="height: 10px;"></div>
+<app-weeks></app-weeks>

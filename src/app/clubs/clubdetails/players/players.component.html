@@ -1,0 +1,43 @@
+<div class="bg-light">
+    <p class="d-inline pl-2" style="font-size: 20px;">{{data[0]['position']}}</p>
+    <p class="d-inline text-center customHide float-right" style="width: 100px;">Nationality</p>
+    <p class="d-inline text-center customHide float-right" style="width: 50px;">Age</p>
+</div>
+
+<div *ngFor="let player of data" class="d-flex w-100 border-bottom align-items-center">
+    <p class="d-inline-block p-3 mb-0 bg-secondary text-white text-center" style="font-size: 40px; width: 80px;">{{player['number']}}</p>
+    
+    <div id="div" class="mx-2">
+        <picture>
+            <source src="assets/{{player['imageUrl']}}">
+            <img src="assets/playerImage.png" alt="Player image">
+        </picture>
+    </div>
+
+    <div class="colored">
+        <a routerLink="/player/{{player['firstName']}}-{{player['lastName']}}">
+            <p id="left">{{player['firstName']}}</p>
+            <p>{{player['lastName']}}</p>
+        </a>
+        <div class="d-block d-sm-none">
+            <img src="assets/flags/{{player['countryCode']}}.svg" width="30px" height="30px" alt="flag">
+            <p class="d-inline-block ml-2 grey">Age:&nbsp;</p>
+            <p class="d-inline-block grey" *ngIf="player['age']; else noAge">{{player['age']}}</p>
+            <ng-template #noAge>
+                <p class="d-inline-block grey">-</p>
+            </ng-template>
+        </div>
+    </div>
+
+    <div class="ml-auto d-none d-sm-flex">
+        <div class="text-center grey" style="width: 50px;">
+            <p *ngIf="player['age']; else noAge">{{player['age']}}</p>
+            <ng-template #noAge>
+                <p>-</p>
+            </ng-template>
+        </div>
+        <div class="text-center" style="width: 100px;">
+            <img src="assets/flags/{{player['countryCode']}}.svg" width="30px" height="30px" alt="flag">
+        </div>
+    </div>
+</div>

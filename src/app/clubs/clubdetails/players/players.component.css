@@ -1,0 +1,34 @@
+.colored p {
+    color: #00a69c;
+    font-weight: bold;
+}
+
+.grey {
+    color: #636363 !important;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+#div {
+    width: 80px;
+    height: 70px;
+}
+
+#div picture, #div picture img {
+    max-width: 80px;
+    max-height: 70px;
+}
+
+@media only screen and (max-width: 576px) {
+    .customHide {
+        display: none !important;
+    }
+    .colored p {
+        display: inline-block;
+    }
+    #left {
+        margin-right: 5px;
+    }
+}

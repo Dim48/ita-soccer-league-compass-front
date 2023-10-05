@@ -1,0 +1,44 @@
+.a {
+    color: #00a69c;
+}
+
+.fontSize {
+    font-size: 70px;
+}
+
+.clubNames {
+    font-size: 26px;
+}
+
+@media only screen and (max-width: 480px) {
+    .img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .fontSize {
+        font-size: 35px;
+    }
+    
+    .clubNames {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 576px) {
+    .fontSize {
+        line-height: 80px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .align {
+        text-align: left !important;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .fontSize {
+        font-size: 90px;
+    }
+}

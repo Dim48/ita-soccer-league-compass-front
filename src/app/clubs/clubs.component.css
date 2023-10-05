@@ -1,0 +1,27 @@
+.border {
+    border: solid 2px #dee2e6 !important;
+}
+
+#id:hover {
+    transform: scale(1.15);
+    transition: transform .2s;
+    filter: drop-shadow(0 0 0.25rem);
+    animation-name: changeShadow;
+    animation-duration: .2s;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+@keyframes changeShadow {
+    from {filter: none;}
+    to {filter: drop-shadow(0 0 0.25rem);}
+  }
+
+@media only screen and (max-width: 576px) {
+    #id:hover {
+        transform: scale(1.1);
+    }
+}

@@ -1,0 +1,23 @@
+<div *ngIf="data; else notFound">
+	<h1>FIELD {{name.slice(-1)}}</h1>
+
+	<div class="border-bottom border-2 mt-4 mb-2">
+		<p class="h5 mb-1 text-uppercase">Latest Matches</p>
+	</div>
+
+	<div class="container-fluid" *ngIf="matchesToDisplay.length; else noMatches">
+		<app-matchinfo [matchesToDisplay]="matchesToDisplay"></app-matchinfo>
+		<div class="mt-2 text-center">
+			<button *ngIf="showButton" type="button" class="btn btn-secondary bg-custom" (click)="loadMore()">Load
+				more</button>
+		</div>
+	</div>
+
+	<ng-template #noMatches>
+		<p class="col bg-light py-2 text-center text-secondary">No Matches played</p>
+	</ng-template>
+</div>
+
+<ng-template #notFound>
+	<h1>Field Not Found</h1>
+</ng-template>

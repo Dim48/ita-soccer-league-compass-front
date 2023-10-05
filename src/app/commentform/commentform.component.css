@@ -1,0 +1,15 @@
+.form-control, .btn:focus {
+    box-shadow: 2px 2px 5px rgba(0,0,0,.12) inset;
+}
+
+.form-control:focus {
+    border-color: rgba(0,0,0,.30);
+}
+
+button {
+    height: 45px;
+    width: 100px;
+    color: white !important;
+    font-size: medium;
+    border-radius: 30px;
+}

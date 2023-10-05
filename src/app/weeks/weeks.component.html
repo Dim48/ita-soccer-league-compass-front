@@ -1,0 +1,8 @@
+<div *ngFor="let week of weeks.slice(1,14); index as i">
+    <div *ngIf="week.length">
+        <h3 class="my-3">Week {{i+1}}</h3>
+        <div class="container-fluid">
+            <app-matchinfo [matchesToDisplay] = "week"></app-matchinfo>
+        </div> 
+    </div> 
+</div>

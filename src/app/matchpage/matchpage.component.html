@@ -1,0 +1,54 @@
+<div *ngIf="data; else notFound">
+  <div class="p-3 bg-light text-center">
+    <div style="font-size: 20px;">
+      <p class="mb-0">{{data['date']}}</p>
+      <div>
+        <a class="a" routerLink="/competition">Ita Soccer League</a>
+        <span> | </span>
+        <span style="white-space: nowrap;">Matchweek {{data['matchWeek']}}</span>
+      </div>
+      <p class="mb-2">Half Time: {{data['halftimeHostGoals']}}-{{data['halftimeGuestGoals']}}</p>
+    </div>
+    <div class="container-fluid">
+      <div class="row align-items-start">
+        <div class="col-sm px-1 text-center align d-flex">
+          <a class="w-100 d-flex flex-sm-column mr-sm-4 mr-lg-5" routerLink="/clubs/{{data['hostClub']['name']}}">
+            <div>
+              <img class="img" src="assets/clubImages/{{data['hostClub']['imageUrl']}}" width="100px" height="100px">
+            </div>
+            <div class="d-flex align-items-center ml-3 ml-sm-0 clubNames justify-content-sm-center">
+              {{data['hostClub']['name']}}
+            </div>
+          </a>
+          <div class="d-sm-none text-right fontSize" style="width: 60px !important;">
+            {{data['hostGoals']}}
+          </div>
+        </div>
+        <p id="hidden" class="d-none d-sm-block fontSize"><b>{{data['hostGoals']}}:{{data['guestGoals']}}</b></p>
+        <div class="col-sm px-1 mt-3 mt-sm-0 text-center align d-flex">
+          <a class="w-100 d-flex flex-sm-column ml-sm-4 ml-lg-5" routerLink="/clubs/{{data['guestClub']['name']}}">
+            <div>
+              <img class="img" src="assets/clubImages/{{data['guestClub']['imageUrl']}}" width="100px" height="100px">
+            </div>
+            <div class="d-flex align-items-center ml-3 ml-sm-0 clubNames justify-content-sm-center">
+              {{data['guestClub']['name']}}
+            </div>
+          </a>
+          <div class="d-sm-none text-right fontSize" style="width: 60px !important;">
+            {{data['guestGoals']}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="mt-2 mb-2 border mx-auto" style="width: 100px;">FULL TIME</p>
+    <div class="d-flex justify-content-center align-items-center">
+      <img src="assets/field.png" width="20px" height="15px" />
+      <a class="ml-1 a" style="line-height: 15px; margin-bottom: 0.1rem;" routerLink="/field/{{data['field']}}">FIELD
+        {{data['field'].slice(-1)}}</a>
+    </div>
+  </div>
+</div>
+
+<ng-template #notFound>
+  <h1>Match Not Found</h1>
+</ng-template>

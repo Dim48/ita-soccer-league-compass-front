@@ -1,0 +1,9 @@
+.border-left {
+    border-width: 2px !important;
+}
+
+@media only screen and (min-width:0px) and (max-width:767px){
+    .border-left {
+      border-width: 0px !important;
+    }
+  }

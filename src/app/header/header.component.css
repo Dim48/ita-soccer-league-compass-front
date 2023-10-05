@@ -1,0 +1,51 @@
+li a {
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    color: #a9adb1;
+}
+
+.navbar-toggler {
+    border: 0 !important;
+}
+
+.navbar-toggler-icon {
+    height: 25px !important;
+    width: 25px !important;
+}
+
+.d-custom {
+    display: flex !important;
+}
+
+.nav-item {
+    transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+    background-color: #00e4d58e;
+}
+
+.form-control:focus, .form-control:focus {
+    box-shadow: none;
+    border-color: rgb(95, 95, 95);
+}
+
+@media only screen and (max-width: 991px) {
+    .nav-item {
+        padding-left: 1rem !important;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .nav-item {
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .d-custom {
+        padding-left: 0 !important;
+    }
+}

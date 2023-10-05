@@ -1,0 +1,15 @@
+.carousel, .carousel .carousel-item {
+    max-height: 775px;
+    max-width: 600px;
+}
+
+.carousel-item picture {
+    min-height: 200px;
+    object-fit: cover;
+}
+
+@media(max-width: 768px) {
+    .carousel .carousel-inner {
+        height:auto
+    }
+}

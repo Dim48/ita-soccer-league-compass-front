@@ -1,0 +1,64 @@
+<h1 *ngIf="showHeader">ITA SOCCER LEAGUE {{currentYear}}-{{currentYear + 1}}</h1>
+
+<table class="table table-striped">
+    <thead class="bg-custom text-white">
+      <tr>
+        <th scope="col" class="tableWidth text-center">#</th>
+        <th scope="col">Club</th>
+        <th scope="col" class="tableWidth text-center">M</th>
+
+        <th scope="col" class="d-none d-big-table-cell tableWidth text-center">W</th>
+        <th scope="col" class="d-none d-big-table-cell tableWidth text-center">D</th>
+        <th scope="col" class="d-none d-big-table-cell tableWidth text-center">L</th>
+        <th scope="col" class="d-none d-big-table-cell tableWidth text-center">GF</th>
+        <th scope="col" class="d-none d-big-table-cell tableWidth text-center">GA</th>
+
+        <th scope="col" class="tableWidth text-center">GD</th>
+        <th scope="col" class="tableWidth text-center">Pt</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let tableRow of tableData; index as i'>
+            <th scope="row" class="text-center">{{i+1}}</th>
+            <td id="td" class="position-relative">
+              <div class="d-flex align-items-center">
+                <img src="/assets/clubImages/{{tableRow['imageUrl']}}" height="25px" width="30px" />
+                &nbsp;
+
+                <div class="d-inline-block">
+                  <div class="d-flex flex-column justify-content-center pb-1">
+                    <a [routerLink]="['/clubs', tableRow['name']]">{{tableRow['name']}}</a>
+                    <div id="divBottom" class="d-none">
+                      <div class="rightMargin" *ngFor="let match of tableRow['matchesPlayed'].slice(0, 5)">
+                        <div *ngIf="match['winner'] == true; else Lost" class="won"></div>
+                        <ng-template #Lost>
+                          <div class="lost"></div>
+                        </ng-template>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div id="div" class="float-right d-flex flex-row-reverse">
+                <div class="rightMargin text-white" *ngFor="let match of tableRow['matchesPlayed'].slice(0, 5)">
+                  <div *ngIf="match['winner'] == true; else Lost" class="won">W</div>
+                  <ng-template #Lost>
+                    <div class="lost">L</div>
+                  </ng-template>
+                </div>
+              </div>
+            </td>
+            <td class="text-center">{{tableRow['matchesWon'] + tableRow['matchesDrawn'] + tableRow['matchesLost'] | number}}</td>
+
+            <td class="d-none d-big-table-cell text-center">{{tableRow['matchesWon']}}</td>
+            <td class="d-none d-big-table-cell text-center">{{tableRow['matchesDrawn']}}</td>
+            <td class="d-none d-big-table-cell text-center">{{tableRow['matchesLost']}}</td>
+            <td class="d-none d-big-table-cell text-center">{{tableRow['goalsFor']}}</td>
+            <td class="d-none d-big-table-cell text-center">{{tableRow['goalsAgainst']}}</td>
+
+            <td class="text-center">{{tableRow['goalsFor'] - tableRow['goalsAgainst']}}</td>
+            <td class="text-center">{{tableRow['points']}}</td>
+        </tr>
+    </tbody>
+</table>

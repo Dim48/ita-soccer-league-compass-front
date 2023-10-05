@@ -1,0 +1,103 @@
+a {
+    color: #049b92;
+}
+
+#div {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+#div div, #div {
+    height: 20px;
+}
+
+#div div {
+    width: 20px;
+}
+
+.won, .lost {
+    vertical-align: middle;
+    text-align: center;
+    line-height: 20px;  
+}
+
+.won {
+    background-color: #5fa462;
+}
+
+.lost {
+    background-color: #e25d6a;
+}
+
+.tableWidth {
+    width: 40px;
+}
+
+.vertical-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightMargin {
+    margin-right: 0.2rem;
+}
+
+@media only screen and (max-width: 480px) {
+    a {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #div {
+        display: none !important;
+    }
+
+    #divBottom {
+        display: flex !important;
+    }
+
+    #divBottom div {
+        height: 4px;
+        width: 12px;
+    }
+    
+    .won, .lost {
+        line-height: 4px;  
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+    #div {
+        display: none !important;
+    }
+
+    #divBottom {
+        display: flex !important;
+    }
+
+    #divBottom div {
+        height: 4px;
+        width: 9px;
+    }
+    
+    .won, .lost {
+        line-height: 4px;  
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .d-big-table-cell {
+        display: table-cell !important;
+    }
+}
+
+@media only screen and (min-width: 1401px) {
+    .tableWidth {
+        width: 50px;
+    }
+}

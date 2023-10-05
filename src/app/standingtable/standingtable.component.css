@@ -1,0 +1,29 @@
+a {
+    color: #049b92;
+}
+
+.tableWidth {
+    width: 40px;
+}
+
+.displayColumns {
+    display: none;
+}
+
+@media only screen and (min-width: 480px) {
+    .displayColumns {
+        display: table-cell !important;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .displayColumns {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .displayColumns {
+        display: table-cell !important;
+    }
+}

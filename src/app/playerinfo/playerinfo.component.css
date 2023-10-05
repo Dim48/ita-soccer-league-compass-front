@@ -1,0 +1,23 @@
+h1 {
+    text-transform: capitalize;
+}
+
+.left {
+    width: 100px;
+}
+
+#green {
+    color: #00a69c;
+}
+
+@media only screen and (min-width: 400px) {
+    .ml-custom {
+        margin-left: 1rem !important;
+    }
+
+    .col-custom {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+}

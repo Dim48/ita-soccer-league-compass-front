@@ -1,0 +1,10 @@
+services:
+  website:
+    image: angular-project
+    ports:
+      - "3000:80"
+
+  api:
+    image: mockoon-image
+    ports:
+      - "8080:8080"

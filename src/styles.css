@@ -1,0 +1,96 @@
+.text-small {
+  font-size: 0.9rem;
+}
+
+.border-2 {
+  border-width: 2px !important;
+}
+
+h1, h2, h3, h4, h5, h6, footer h5 {
+  text-transform: uppercase;
+}
+
+h1, h2, h3, footer h5 {
+  font-family: "Oswald", sans-serif;
+}
+
+h4, h5, h6, p {
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+  
+  &:hover {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+.bg-custom{
+  background: rgb(43,53,62);
+  background: linear-gradient(45deg, rgba(43,53,62,1) 0%, rgba(22,22,22,1) 100%); 
+}
+
+.table td, .table th {
+  vertical-align: middle;
+  padding: 0.4rem;
+}
+
+textarea {
+  min-height: 100px;
+  max-height: 350px;
+}
+
+#websiteApp { 
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#websiteApp > div {
+  flex: 1;
+}
+
+#div {
+  max-width: 1500px;
+}
+
+body {
+  background-color: #e8e8e8;
+}
+
+.gradientTransition {
+  position: relative;
+  z-index: 1;
+}
+
+.gradientTransition::before {
+  position: absolute;
+  content: "";
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: #00a69c;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.gradientTransition:hover::before {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 1500px) {
+  #websiteApp {
+    padding: 40px;
+  }
+}
