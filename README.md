@@ -28,5 +28,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Docker setup
 
-Pull both images from https://hub.docker.com/r/zd48/ita-soccer-league/tags, and pull https://github.com/Dim48/ita-soccer-league-compass-front/blob/main/docker-compose.yaml, and finally
+Pull both images from https://hub.docker.com/r/zd48/ita-soccer-league/tags, and download https://github.com/Dim48/ita-soccer-league-compass-front/blob/main/docker-compose.yaml, and finally
 'docker-compose up' will setup everything, app will run on: 'http://localhost:3000'.
