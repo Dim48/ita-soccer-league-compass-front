@@ -17,7 +17,7 @@
   <tbody>
       <tr *ngFor='let tableRow of tableData; index as i'>
           <th scope="row" class="text-center">{{i+1}}</th>
-          <td><img src="/assets/clubImages/{{tableRow['imageUrl']}}" height="25px" width="25px" />&nbsp;<a [routerLink]="['/clubs', tableRow['name']]">{{tableRow['short']}}</a></td>
+          <td><img src="assets/clubImages/{{tableRow['imageUrl']}}" height="25px" width="25px" />&nbsp;<a [routerLink]="['/clubs', tableRow['name']]">{{tableRow['short']}}</a></td>
           <td class="text-center">{{tableRow['matchesWon'] + tableRow['matchesDrawn'] + tableRow['matchesLost'] | number}}</td>
 
           <td class="displayColumns text-center">{{tableRow['matchesWon']}}</td>
