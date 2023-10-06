@@ -16,7 +16,10 @@
         <div class="row mx-1 mt-2 border-bottom">
             <span class="d-inline-block left text-secondary mt-auto">Current Club</span>
             <div class="col pl-0" style="white-space: nowrap;">
-              <img class="ml-3" src="assets/clubImages/{{data['club']['imageUrl']}}" width="30px" height="30px">
+              <picture class="ml-3" style="width: 30px; height: 30px;">
+                <source srcset="assets/clubImages/{{data['club']['imageUrl']}}.webp" type="image/webp">
+                <img src="assets/clubImages/{{data['club']['imageUrl']}}.png" width="30px" height="30px">
+              </picture>
               <span id="green" class="pl-2 mt-auto"><a routerLink="/clubs/{{data['club']['name']}}">{{data['club']['name']}}</a></span>
             </div>
         </div>

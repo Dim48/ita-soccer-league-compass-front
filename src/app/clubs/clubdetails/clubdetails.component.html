@@ -3,7 +3,10 @@
     <div class="container-fluid">
         <div class="row mt-3 p-2 p-lg-3 bg-light">
             <div class="mx-auto mr-0 mr-custom">
-                <img src="assets/clubImages/{{clubData['imageUrl']}}" width="120px" height="110px" />
+                <picture style="width: 120px; height: 110px;">
+                    <source srcset="assets/clubImages/{{clubData['imageUrl']}}.webp" type="image/webp">
+                    <img src="assets/clubImages/{{clubData['imageUrl']}}.png" width="120px" height="110px" />
+                </picture>
             </div>
             <div class="col-custom container-fluid">
                 <div class="row marginTop border-bottom">

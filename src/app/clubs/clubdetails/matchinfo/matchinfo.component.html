@@ -7,19 +7,28 @@
 
         <div class="d-none d-big-flex col-big justify-content-end align-items-center pr-0">
             <p class="sizedText mr-2 mb-0">{{match['hostClub']['name']}}</p>
-            <img src="assets/clubImages/{{match['hostClub']['imageUrl']}}" width="50px" height="40px" />
+            <picture style="width: 50px; height: 40px;">
+                <source srcset="assets/clubImages/{{match['hostClub']['imageUrl']}}.webp" type="image/webp">
+                <img src="assets/clubImages/{{match['hostClub']['imageUrl']}}.png" width="50px" height="40px" />
+            </picture>
         </div>
 
         <div id="middle" class="col align-self-center p-2">
             <div class="d-flex justify-content-center align-items-start">
                 <div class="d-flex d-big-none flex-column flex-sm-row flex-md-column flex-lg-row align-items-center justify-content-end w-100">
                     <span id="orderSecond" class="d-inline text-center">{{match['hostClub']['name']}}</span>
-                    <img class="d-inline-block ml-2" src="assets/clubImages/{{match['hostClub']['imageUrl']}}" width="35px" height="30px" />
+                    <picture class="d-inline-block ml-2" style="width: 35px; height: 30px;">
+                        <source srcset="assets/clubImages/{{match['hostClub']['imageUrl']}}.webp" type="image/webp">
+                        <img src="assets/clubImages/{{match['hostClub']['imageUrl']}}.png" width="35px" height="30px" />
+                    </picture>
                 </div>
                 <p class="d-inline align-self-center px-2 ml-2 mb-0 border customParagraph">{{match['hostGoals']}}</p>
                 <p class="d-inline align-self-center px-2 mr-2 mb-0 ml-1 border customParagraph">{{match['guestGoals']}}</p>
                 <div class="d-flex d-big-none flex-column flex-sm-row flex-md-column flex-lg-row align-items-center w-100">
-                    <img class="d-inline-block mr-2" src="assets/clubImages/{{match['guestClub']['imageUrl']}}" width="35px" height="30px" />
+                    <picture class="d-inline-block ml-2"  style="width: 35px; height: 30px;">
+                        <source srcset="assets/clubImages/{{match['guestClub']['imageUrl']}}.webp" type="image/webp">
+                        <img src="assets/clubImages/{{match['guestClub']['imageUrl']}}.png" width="35px" height="30px" />
+                    </picture>
                     <span class="d-inline text-center">{{match['guestClub']['name']}}</span>
                 </div>
             </div>
@@ -30,7 +39,10 @@
         </div>
 
         <div class="d-none d-big-flex col-big justify-content-start align-items-center pl-0">
-            <img src="assets/clubImages/{{match['guestClub']['imageUrl']}}" width="50px" height="40px" />
+            <picture style="width: 50px; height: 40px;">
+                <source srcset="assets/clubImages/{{match['guestClub']['imageUrl']}}.webp" type="image/webp">
+                <img src="assets/clubImages/{{match['guestClub']['imageUrl']}}.png" width="50px" height="40px" />
+            </picture>
             <p class="sizedText ml-2 mb-0">{{match['guestClub']['name']}}</p>
         </div>
     </div>

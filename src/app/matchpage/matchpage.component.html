@@ -14,7 +14,10 @@
         <div class="col-sm px-1 text-center align d-flex">
           <a class="w-100 d-flex flex-sm-column mr-sm-4 mr-lg-5" routerLink="/clubs/{{data['hostClub']['name']}}">
             <div>
-              <img class="img" src="assets/clubImages/{{data['hostClub']['imageUrl']}}" width="100px" height="100px">
+              <picture class="img" style="width: 100px; height: 100px;">
+                <source class="img" srcset="assets/clubImages/{{data['hostClub']['imageUrl']}}.webp" type="image/webp">
+                <img class="img" src="assets/clubImages/{{data['hostClub']['imageUrl']}}.png" width="100px" height="100px">
+              </picture>
             </div>
             <div class="d-flex align-items-center ml-3 ml-sm-0 clubNames justify-content-sm-center">
               {{data['hostClub']['name']}}
@@ -28,7 +31,10 @@
         <div class="col-sm px-1 mt-3 mt-sm-0 text-center align d-flex">
           <a class="w-100 d-flex flex-sm-column ml-sm-4 ml-lg-5" routerLink="/clubs/{{data['guestClub']['name']}}">
             <div>
-              <img class="img" src="assets/clubImages/{{data['guestClub']['imageUrl']}}" width="100px" height="100px">
+              <picture class="img" style="width: 100px; height: 100px;">
+                <source class="img" srcset="assets/clubImages/{{data['guestClub']['imageUrl']}}.webp" type="image/webp">
+                <img class="img" src="assets/clubImages/{{data['guestClub']['imageUrl']}}.png" width="100px" height="100px">
+              </picture>
             </div>
             <div class="d-flex align-items-center ml-3 ml-sm-0 clubNames justify-content-sm-center">
               {{data['guestClub']['name']}}

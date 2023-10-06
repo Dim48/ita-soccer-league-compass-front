@@ -22,7 +22,10 @@
             <th scope="row" class="text-center">{{i+1}}</th>
             <td id="td" class="position-relative">
               <div class="d-flex align-items-center">
-                <img src="assets/clubImages/{{tableRow['imageUrl']}}" height="25px" width="30px" />
+                <picture style="width: 30px; height: 25px;">
+                  <source srcset="assets/clubImages/{{tableRow['imageUrl']}}.webp" type="image/webp">
+                  <img src="assets/clubImages/{{tableRow['imageUrl']}}.png" width="30px" height="25px" />
+                </picture>
                 &nbsp;
 
                 <div class="d-inline-block">
