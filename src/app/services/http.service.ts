@@ -20,7 +20,7 @@ export class HttpService {
   }
 
   get(path: string) {
-    return this.httpClient.get(this.apiUrl.concat(path), {responseType: 'json'});
+    return this.httpClient.get(this.apiUrl.concat(path).concat(".json"), {responseType: 'json'}); // .json only for GitHub Pages
   }
 
   isTableDataCached() {
