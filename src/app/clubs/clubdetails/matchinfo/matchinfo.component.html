@@ -1,7 +1,7 @@
 <a routerLink="/match/{{match['name']}}" *ngFor="let match of matchesToDisplay; first as isFirst">
     <div class="row border mt-2 bg-grey">
         <div id="id" class="my-2 ml-2 pr-2 pb-4 border-right noBorder">
-            <img src="assets/logo.png" width="30px" height="30px" />
+            <img src="assets/logo.png" width="30px" height="30px" alt="logo" />
             <span class="ml-2">{{match['date']}}</span>
         </div>
 
@@ -9,7 +9,7 @@
             <p class="sizedText mr-2 mb-0">{{match['hostClub']['name']}}</p>
             <picture style="width: 50px; height: 40px;">
                 <source srcset="assets/clubImages/{{match['hostClub']['imageUrl']}}.webp" type="image/webp">
-                <img src="assets/clubImages/{{match['hostClub']['imageUrl']}}.png" width="50px" height="40px" />
+                <img src="assets/clubImages/{{match['hostClub']['imageUrl']}}.png" width="50px" height="40px" alt="host club image" />
             </picture>
         </div>
 
@@ -19,7 +19,7 @@
                     <span id="orderSecond" class="d-inline text-center">{{match['hostClub']['name']}}</span>
                     <picture class="d-inline-block ml-2" style="width: 35px; height: 30px;">
                         <source srcset="assets/clubImages/{{match['hostClub']['imageUrl']}}.webp" type="image/webp">
-                        <img src="assets/clubImages/{{match['hostClub']['imageUrl']}}.png" width="35px" height="30px" />
+                        <img src="assets/clubImages/{{match['hostClub']['imageUrl']}}.png" width="35px" height="30px" alt="host club image" />
                     </picture>
                 </div>
                 <p class="d-inline align-self-center px-2 ml-2 mb-0 border customParagraph">{{match['hostGoals']}}</p>
@@ -27,13 +27,13 @@
                 <div class="d-flex d-big-none flex-column flex-sm-row flex-md-column flex-lg-row align-items-center w-100">
                     <picture class="d-inline-block mr-2"  style="width: 35px; height: 30px;">
                         <source srcset="assets/clubImages/{{match['guestClub']['imageUrl']}}.webp" type="image/webp">
-                        <img src="assets/clubImages/{{match['guestClub']['imageUrl']}}.png" width="35px" height="30px" />
+                        <img src="assets/clubImages/{{match['guestClub']['imageUrl']}}.png" width="35px" height="30px" alt="guest club image" />
                     </picture>
                     <span class="d-inline text-center">{{match['guestClub']['name']}}</span>
                 </div>
             </div>
             <div class="d-flex justify-content-center align-items-center mt-1">
-                <img src="assets/field.png" width="20px" height="15px" />
+                <img src="assets/field.png" width="20px" height="15px" alt="field image" />
                 <p class="text-dark ml-1 mb-0" style="font-size: small;">FIELD {{match['field'].slice(-1)}}</p>
             </div>
         </div>
@@ -41,7 +41,7 @@
         <div class="d-none d-big-flex col-big justify-content-start align-items-center pl-0">
             <picture style="width: 50px; height: 40px;">
                 <source srcset="assets/clubImages/{{match['guestClub']['imageUrl']}}.webp" type="image/webp">
-                <img src="assets/clubImages/{{match['guestClub']['imageUrl']}}.png" width="50px" height="40px" />
+                <img src="assets/clubImages/{{match['guestClub']['imageUrl']}}.png" width="50px" height="40px" alt="guest club image" />
             </picture>
             <p class="sizedText ml-2 mb-0">{{match['guestClub']['name']}}</p>
         </div>

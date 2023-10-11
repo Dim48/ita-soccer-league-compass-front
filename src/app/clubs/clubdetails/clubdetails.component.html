@@ -5,7 +5,7 @@
             <div class="mx-auto mr-0 mr-custom">
                 <picture style="width: 120px; height: 110px;">
                     <source srcset="assets/clubImages/{{clubData['imageUrl']}}.webp" type="image/webp">
-                    <img src="assets/clubImages/{{clubData['imageUrl']}}.png" width="120px" height="110px" />
+                    <img src="assets/clubImages/{{clubData['imageUrl']}}.png" width="120px" height="110px" alt="club image" />
                 </picture>
             </div>
             <div class="col-custom container-fluid">
@@ -21,10 +21,10 @@
                     <span class="d-flex align-items-end left text-secondary">Social</span>
                     <div class="col py-1" style="white-space: nowrap;">
                         <a *ngIf="clubData['social']['instagram']" href="{{clubData['social']['instagram']}}" target="_blank">
-                            <img src="assets/ig.png" height="30px" width="30px" />
+                            <img src="assets/ig.png" height="30px" width="30px" alt="instagram logo" />
                         </a>
                         <a [ngClass]="{'ml-2' : clubData['social']['instagram']}" *ngIf="clubData['social']['facebook']" href="{{clubData['social']['facebook']}}" target="_blank">
-                            <img src="assets/facebook.svg" height="30px" width="30px" />
+                            <img src="assets/facebook.svg" height="30px" width="30px" alt="facebook logo" />
                         </a>
                     </div> 
                 </div>

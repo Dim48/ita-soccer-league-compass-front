@@ -20,7 +20,7 @@
           <td>
             <picture style="width: 25px; height: 25px;">
               <source srcset="assets/clubImages/{{tableRow['imageUrl']}}.webp" type="image/webp">
-              <img src="assets/clubImages/{{tableRow['imageUrl']}}.png" width="25px" height="25px" />
+              <img src="assets/clubImages/{{tableRow['imageUrl']}}.png" width="25px" height="25px" alt="club image" />
             </picture>
             &nbsp;
             <a [routerLink]="['/clubs', tableRow['name']]">{{tableRow['short']}}</a>

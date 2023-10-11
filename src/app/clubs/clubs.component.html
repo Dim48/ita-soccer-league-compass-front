@@ -5,7 +5,7 @@
         <div id="id" class=" mx-2 mt-3 p-2 text-center">
             <picture style="width: 120px; height: 110px;">
                 <source srcset="assets/clubImages/{{club['imageUrl']}}.webp" type="image/webp">
-                <img src="assets/clubImages/{{club['imageUrl']}}.png" width="120px" height="110px" />
+                <img src="assets/clubImages/{{club['imageUrl']}}.png" width="120px" height="110px" alt="club image" />
             </picture>
             <p *ngIf="club['short']; else noShort" class="mt-1 mb-0">{{club['short']}}</p>
             <ng-template #noShort>
