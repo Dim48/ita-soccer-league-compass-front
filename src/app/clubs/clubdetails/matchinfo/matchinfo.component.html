@@ -1,7 +1,10 @@
 <a routerLink="/match/{{match['name']}}" *ngFor="let match of matchesToDisplay; first as isFirst">
     <div class="row border mt-2 bg-grey">
         <div id="id" class="my-2 ml-2 pr-2 pb-4 border-right noBorder">
-            <img src="assets/logo.png" width="30px" height="30px" alt="logo" />
+            <picture style="width: 30px; height: 30px;">
+                <source srcset="assets/logo.webp" type="image/webp" style="width: 30px; height: 30px;">
+                <img src="assets/logo.png" width="30px" height="30px" alt="logo" />
+              </picture>
             <span class="ml-2">{{match['date']}}</span>
         </div>
 
