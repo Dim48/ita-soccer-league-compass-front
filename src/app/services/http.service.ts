@@ -9,7 +9,7 @@ import { catchError, tap, map } from 'rxjs/operators';
 })
 export class HttpService {
   //private apiUrl = "http://localhost:8080/api/v1";
-  private apiUrl = "https://dim48.github.io/ita-soccer-league-api";
+  private apiUrl = "https://zdravdim.github.io/ita-soccer-league-api";
   private tableData: any;
   private tableDataCached = false;
   
