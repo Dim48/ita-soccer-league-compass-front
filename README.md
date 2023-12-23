@@ -17,4 +17,5 @@ Download https://github.com/ZdravDim/ita-soccer-league-compass-front/blob/main/d
 ## Deployment
 
 `ng build --base-href "https://ZdravDim.github.io/ita-soccer-league-compass-front/"`
+
 `npx angular-cli-ghpages --dir=dist/ita-soccer-league-compass-front`
