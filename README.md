@@ -14,7 +14,7 @@ https://hub.docker.com/repository/docker/zd48/ita-soccer-league/general
 
 Download https://github.com/ZdravDim/ita-soccer-league-compass-front/blob/main/docker-compose.yaml, and run `docker-compose up`, app will run on: http://localhost:3000.
 
-## Deployment (for me)
+## Deployment
 
 `ng build --base-href "https://ZdravDim.github.io/ita-soccer-league-compass-front/"`
 
